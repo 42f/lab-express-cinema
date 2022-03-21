@@ -1,0 +1,26 @@
+<section class="movie-infos">
+
+  <div class="movie-artwork">
+    <img src="{{this.image}}" alt="{{this.title}} artwork" />
+  </div>
+
+  <div class="movie-details">
+    <a href="javascript:history.back()">Go Back</a>
+    <h2>{{this.title}}</h2>
+    <p>Director: {{this.director}}</p>
+    <p>Stars:</p>
+    <ul>
+      {{#each this.stars}}
+        <li>{{this}}</li>
+      {{/each}}
+    </ul>
+    <p>{{this.description}}</p>
+    <p>
+			Showtimes:
+      {{#each this.showtimes}}
+				{{this}} |
+      {{/each}}
+    </p>
+  </div>
+
+</section>
