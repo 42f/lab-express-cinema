@@ -96,7 +96,7 @@ async function seedMovies() {
     await cleanDatabase();
     const moviesCreated = await Movie.create(movies);
     console.log(`${moviesCreated.length} movies were seeded.`);
-    mongoose.connection.close();
+    await mongoose.connection.close();
   } catch (err) {
     console.error(err);
   }
